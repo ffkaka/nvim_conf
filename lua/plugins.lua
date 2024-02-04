@@ -41,6 +41,9 @@ return require('packer').startup(function(use)
   --
   use { 'williamboman/mason.nvim' }
 
+	--
+	use { 'neovim/nvim-lspconfig' }
+
 	-- colorscheme
 	vim.cmd.colorscheme "PaperColor"
 

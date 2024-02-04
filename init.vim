@@ -1,5 +1,6 @@
 lua require('settings')
 lua require('plugins')
+lua require("mason").setup()
 
 
 " ########### for Mac Color activation ###########
