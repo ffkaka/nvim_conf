@@ -37,9 +37,15 @@ return require('packer').startup(function(use)
 
   -- vim-go
   use { 'fatih/vim-go' }
+	-- go global settings
+	vim.g.go_imports_autosave = 0
+	vim.g.go_completion_enabled = 1
+	vim.g.go_completion_auto_gopkgs = 1
 
   -- tagbar
   use { 'preservim/tagbar' }
+	-- keymap
+	vim.keymap.set('n', '<F6>', function() vim.cmd "TagbarToggle" end)
 
   --
   use { 'williamboman/mason.nvim' }
@@ -58,12 +64,5 @@ return require('packer').startup(function(use)
 	-- colorscheme
 	vim.cmd 'colorscheme tokyonight-night'
 
-	-- go global settings
-	vim.g.go_imports_autosave = 0
-	vim.g.go_completion_enabled = 1
-	vim.g.go_completion_auto_gopkgs = 1
-
-	-- keymap
-		vim.keymap.set('n', '<F6>', function() vim.cmd "TagbarToggle" end)
 
 end)
