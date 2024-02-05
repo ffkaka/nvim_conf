@@ -44,6 +44,8 @@ return require('packer').startup(function(use)
   --
   use { 'williamboman/mason.nvim' }
 
+	use { "catppuccin/nvim", as = "catppuccin" }
+
 	--
 	use { 'neovim/nvim-lspconfig' }
 
@@ -53,9 +55,8 @@ return require('packer').startup(function(use)
 		priority = 1000,
 		opts = {},
 	}
-
 	-- colorscheme
-	vim.cmd.colorscheme "tokyonight-night"
+	vim.cmd 'colorscheme tokyonight-night'
 
 	-- go global settings
 	vim.g.go_imports_autosave = 0
