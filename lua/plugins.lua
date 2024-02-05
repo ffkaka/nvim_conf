@@ -18,7 +18,10 @@ return require('packer').startup(function(use)
   use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
 
   -- Post-install/update hook with neovim command
-  use { 'nvim-treesitter/nvim-treesitter' }
+  use {
+		'nvim-treesitter/nvim-treesitter',
+		run = ':TSUpdate'
+	}
 
   -- Post-install/update hook with call of vimscript function with argument
   use { 'glacambre/firenvim', run = function() vim.fn['firenvim#install'](0) end }
@@ -44,8 +47,15 @@ return require('packer').startup(function(use)
 	--
 	use { 'neovim/nvim-lspconfig' }
 
+	use {
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	}
+
 	-- colorscheme
-	vim.cmd.colorscheme "PaperColor"
+	vim.cmd.colorscheme "tokyonight-night"
 
 	-- go global settings
 	vim.g.go_imports_autosave = 0
@@ -53,8 +63,6 @@ return require('packer').startup(function(use)
 	vim.g.go_completion_auto_gopkgs = 1
 
 	-- keymap
-		vim.keymap.set('n', '<F6>', function() 
-			vim.cmd "TagbarToggle"
-		end)
+		vim.keymap.set('n', '<F6>', function() vim.cmd "TagbarToggle" end)
 
 end)
