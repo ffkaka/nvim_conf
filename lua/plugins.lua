@@ -20,7 +20,11 @@ return require('packer').startup(function(use)
   -- Post-install/update hook with neovim command
   use {
 		'nvim-treesitter/nvim-treesitter',
-		run = ':TSUpdate'
+		run = ':TSUpdate',
+	}
+
+	use {
+		'tree-sitter/tree-sitter-go'
 	}
 
   -- Post-install/update hook with call of vimscript function with argument
@@ -44,16 +48,21 @@ return require('packer').startup(function(use)
 
   -- tagbar
   use { 'preservim/tagbar' }
-	-- keymap
 	vim.keymap.set('n', '<F6>', function() vim.cmd "TagbarToggle" end)
 
-  --
-  use { 'williamboman/mason.nvim' }
+  -- mason
+	use ({
+		"williamboman/mason.nvim",
+		config = function()
+			require("mason").setup()
+		end,
+	})
+
+	use {
+		"williamboman/mason-lspconfig.nvim",
+	}
 
 	use { "catppuccin/nvim", as = "catppuccin" }
-
-	--
-	use { 'neovim/nvim-lspconfig' }
 
 	use {
 		"folke/tokyonight.nvim",
