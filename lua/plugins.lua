@@ -45,10 +45,18 @@ return require('packer').startup(function(use)
 	vim.g.go_imports_autosave = 0
 	vim.g.go_completion_enabled = 1
 	vim.g.go_completion_auto_gopkgs = 1
+	vim.g.go_highlight_types = 1
+	vim.g.go_highlight_extra_types = 1
+	vim.g.go_highlight_functions = 1
+	vim.g.go_highlight_function_calls = 1
 
   -- tagbar
   use { 'preservim/tagbar' }
 	vim.keymap.set('n', '<F6>', function() vim.cmd "TagbarToggle" end)
+
+	-- nerdtree
+	use { 'preservim/nerdtree' }
+	vim.keymap.set('n', '<F5>', function() vim.cmd ':NERDTreeToggle' end)
 
   -- mason
 	use ({
