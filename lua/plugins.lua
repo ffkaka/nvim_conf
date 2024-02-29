@@ -43,7 +43,7 @@ return require('packer').startup(function(use)
   use { 'fatih/vim-go' }
 	-- go global settings
 	vim.g.go_imports_autosave = 0
-	vim.g.go_completion_enabled = 1
+	--vim.g.go_completion_enabled = 1
 	vim.g.go_completion_auto_gopkgs = 1
 	vim.g.go_highlight_types = 1
 	vim.g.go_highlight_extra_types = 1
@@ -86,12 +86,12 @@ return require('packer').startup(function(use)
 	use {
 		'hrsh7th/nvim-cmp',
 		requires = {
+			--'rafamadriz/friendly-snippets',
+			-- 'saadparwaiz1/cmp_luasnip',
+			'L3MON4D3/LuaSnip',
 			'hrsh7th/cmp-buffer',
 			'hrsh7th/cmp-path',
-			'saadparwaiz1/cmp_luasnip',
-			'hrsh7th/cmp-nvim-lsp',
-			'L3MON4D3/LuaSnip',
-			'rafamadriz/friendly-snippets'
+			'hrsh7th/cmp-nvim-lsp'
 		}
 	}
 	vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
