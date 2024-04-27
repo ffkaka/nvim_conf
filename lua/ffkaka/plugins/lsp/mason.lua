@@ -37,6 +37,8 @@ return {
         "emmet_ls",
         "prismals",
         "pyright",
+        "jdtls", -- java language server
+        "gopls", -- go language server
       },
     })
 
@@ -48,6 +50,7 @@ return {
         "black", -- python formatter
         "pylint",
         "eslint_d",
+        "golangci-lint", -- go linter
       },
     })
   end,
