@@ -7,7 +7,7 @@ opt.number = true
 
 opt.tabstop = 2
 opt.shiftwidth = 2
--- opt.expendtab = true
+opt.expandtab = true
 opt.autoindent = true
 
 -- search
