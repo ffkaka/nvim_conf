@@ -24,3 +24,26 @@ opt.guifont = "Monaco"
 -- split window
 opt.splitright = true
 opt.splitbelow = true
+
+-- adjust expand tabs and tabstop
+local nvim_create_autocmd = vim.api.nvim_create_autocmd
+
+nvim_create_autocmd("FileType", {
+  pattern = "c,h,cpp,hpp,go",
+  callback = function()
+    vim.opt_local.shiftwidth = 2
+    vim.opt_local.tabstop = 2
+    vim.opt_local.expandtab = false
+    vim.opt_local.autoindent = true
+  end,
+})
+
+nvim_create_autocmd("FileType", {
+  pattern = "python",
+  callback = function()
+    vim.opt_local.shiftwidth = 4
+    vim.opt_local.tabstop = 4
+    vim.opt_local.expandtab = true
+    vim.opt_local.autoindent = true
+  end,
+})
