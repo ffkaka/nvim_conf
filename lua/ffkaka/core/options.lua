@@ -25,6 +25,9 @@ opt.guifont = "Monaco"
 opt.splitright = true
 opt.splitbelow = true
 
+-- clipboard
+opt.clipboard:append("unnamedplus") -- use system clipboard as default register
+
 -- adjust expand tabs and tabstop
 local nvim_create_autocmd = vim.api.nvim_create_autocmd
 
