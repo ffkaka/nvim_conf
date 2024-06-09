@@ -7,6 +7,9 @@ return {
     { "folke/neodev.nvim", opts = {} },
   },
   config = function()
+    -- setup nvim-java
+    require("java").setup({})
+
     -- import lspconfig plugin
     local lspconfig = require("lspconfig")
 
@@ -135,8 +138,6 @@ return {
 
     -- jdtls config
     local root_pattern = lspconfig.util.root_pattern
-    lspconfig.jdtls.setup({
-      root_dir = root_pattern(".git", "pom.xml", "~/.m2")
-    })
+    lspconfig.jdtls.setup({})
   end,
 }
