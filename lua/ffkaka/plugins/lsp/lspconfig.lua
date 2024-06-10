@@ -13,6 +13,8 @@ return {
     -- import lspconfig plugin
     local lspconfig = require("lspconfig")
 
+    require("mason").setup({})
+
     -- import mason_lspconfig plugin
     local mason_lspconfig = require("mason-lspconfig")
 
@@ -138,6 +140,8 @@ return {
 
     -- jdtls config
     local root_pattern = lspconfig.util.root_pattern
-    lspconfig.jdtls.setup({})
+    lspconfig["jdtls"].setup({
+      root_dir = root_pattern(".git", "pom.xml", "~/.m2")
+    })
   end,
 }
