@@ -7,7 +7,7 @@ $ brew install font-meslo-lg-nerd-font
 ```
 
 ## for video reference
-https://youtu.be/6pAG3BHurdM?si=QS-sTCOZCHhBz0_A
+https://youtu.be/m8C0Cq9Uv9o?si=9d1DER-YaQUBqQim
 
 ## for git reference
-https://github.com/josean-dev/dev-environment-files/tree/main
+https://github.com/nvim-lua/kickstart.nvim
