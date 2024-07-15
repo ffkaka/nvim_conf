@@ -25,6 +25,9 @@ require("lazy").setup({
 	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
 	"github/copilot.vim", -- GitHub Copilot integration
 
+	require("ffkaka.plugins.tagbar"),
+	require("ffkaka.plugins.surround"),
+
 	require("ffkaka.plugins.vim-go"),
 
 	-- easy explore
@@ -153,7 +156,7 @@ require("lazy").setup({
 	-- Highlight todo, notes, etc in comments
 	require("ffkaka.plugins.todo-comments"),
 
-	require("ffkaka.plugins.mini"),
+	-- require("ffkaka.plugins.mini"),
 
 	require("ffkaka.plugins.nvim-treesitter"),
 
