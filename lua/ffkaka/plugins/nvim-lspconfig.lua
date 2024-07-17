@@ -159,7 +159,18 @@ return { -- LSP Configuration & Plugins
 			clangd = {},
 			gopls = {},
 			pyright = {},
-			pylsp = {},
+			pylsp = {
+				settings = {
+					pylsp = {
+						plugins = {
+							pycodestyle = {
+								enabled = true,
+								ignore = { "E501", "E231" },
+							},
+						},
+					},
+				},
+			},
 			jdtls = {},
 			cmake = {},
 			-- rust_analyzer = {},
