@@ -159,7 +159,9 @@ return { -- LSP Configuration & Plugins
 			clangd = {},
 			gopls = {},
 			pyright = {},
+			pylsp = {},
 			jdtls = {},
+			cmake = {},
 			-- rust_analyzer = {},
 			-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 			--
