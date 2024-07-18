@@ -4,6 +4,7 @@ $ brew install
 $ brew tap homebrew/cask-fonts
 $ brew install font-meslo-lg-nerd-font
 # $ brew install font-hack-nerd-font
+go install golang.org/x/tools/gopls@latest
 ```
 
 ## for video reference
