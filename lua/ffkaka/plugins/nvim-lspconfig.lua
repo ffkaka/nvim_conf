@@ -160,30 +160,19 @@ return { -- LSP Configuration & Plugins
 			gopls = {},
 			pyright = {},
 			pylsp = {
-				-- cmd = {...},
-				-- filetypes = { ...},
-				-- capabilities = {},
 				settings = {
 					pylsp = {
 						plugins = {
 							pycodestyle = {
 								enabled = true,
-								ignore = { "E501", "E231" },
+								ignore = { "E501", "E231", "E261" },
 							},
 						},
 					},
 				},
 			},
 			jdtls = {},
-			cmake = {
-				-- cmd = {...},
-				settings = {
-					CMake = {
-						filetypes = { "cmake", "CMakeLists.txt" },
-					},
-				},
-				-- capabilities = {},
-			},
+			cmake = {},
 			-- rust_analyzer = {},
 			-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 			--
