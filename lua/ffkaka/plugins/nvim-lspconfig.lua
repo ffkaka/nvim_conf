@@ -197,6 +197,8 @@ return { -- LSP Configuration & Plugins
 					},
 				},
 			},
+			htmlhint = {},
+			htmlbeautifier = {},
 		}
 
 		require("java").setup()
