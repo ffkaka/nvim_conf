@@ -25,6 +25,7 @@ require("lazy").setup({
 	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
 	"github/copilot.vim", -- GitHub Copilot integration
 
+	require("ffkaka.plugins.nvim-lastplace"), -- Open with last cursor position
 	require("ffkaka.plugins.tagbar"),
 	require("ffkaka.plugins.surround"),
 
